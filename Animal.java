@@ -1,34 +1,27 @@
-package Abstract;
+package sample;
 
-abstract class Animal 
+ abstract class Animal 
 {
-	public abstract void sound();
-}
-class Dog extends Animal
-{
-	public void sound()
+	public abstract void animalsound();
+	public void sleep()
 	{
-		System.out.println("Dog is barking");
+		System.out.println("Zzz");
 	}
 }
-class Lion extends Animal
+class Pig extends Animal
 {
-
-	@Override
-	public void sound() 
+	public void animalsound()
 	{
-	 System.out.println("Lion is Roar");
+		System.out.println("The pig sys:wee wee");
 		
 	}
-	
 }
-class Test
+class Main
 {
 	public static void main(String[] args)
 	{
-		Dog d=new Dog();
-		Lion l=new Lion();
-		d.sound();
-		l.sound();
+		Pig myPig=new Pig();
+		myPig.animalsound();
+		myPig.sleep();
 	}
 }
